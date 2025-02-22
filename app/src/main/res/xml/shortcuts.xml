@@ -9,6 +9,6 @@
         android:shortcutLongLabel="@string/toggle_connect"
         tools:ignore="UnusedAttribute">
         <intent
-            android:action="io.github.romanvht.byedpi.TOGGLE_SERVICE" />
+            android:action="io.github.romanvht.byedpi.TOGGLE_UPDATE" />
     </shortcut>
 </shortcuts>

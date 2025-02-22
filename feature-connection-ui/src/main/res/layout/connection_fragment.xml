@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ConnectionFragment">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/status_button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_text"
+            android:layout_marginBottom="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Выберите профиль:" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textColor="?attr/colorOnPrimary"
+            android:background="@drawable/bg_spinner"
+            android:popupBackground="?attr/colorPrimary"
+            android:layout_gravity="center|start" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/status_button"
+        android:backgroundTint="?attr/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="10pt"
+        android:paddingTop="5pt"
+        android:paddingRight="10pt"
+        android:paddingBottom="5pt"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        tools:text="@string/vpn_connect" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/status_text"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status_button"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        tools:text="@string/vpn_disconnected" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/proxy_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/status_text"
+        android:layout_centerHorizontal="true"
+        tools:text="127.0.0.1:1080" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/open_editor_link"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/proxy_address"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="?attr/colorPrimary"
+        android:text="@string/open_editor"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>

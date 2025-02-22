@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profiles_text"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Список профайлов" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_btn"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="54dp"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:text="Добавить" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_profiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp" />
+</FrameLayout>

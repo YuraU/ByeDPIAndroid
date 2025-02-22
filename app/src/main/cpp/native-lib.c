@@ -1,5 +1,10 @@
 #include <string.h>
 
+#include <sys/select.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #include <jni.h>
 #include <android/log.h>
 
@@ -89,6 +94,37 @@ Java_io_github_dovecoteescapee_byedpi_core_ByeDpiProxy_jniStopProxy(
     if (res < 0) {
         uniperror("shutdown");
         return get_e();
+    }
+
+    return 0;
+}
+
+JNIEXPORT jint JNICALL
+Java_io_github_dovecoteescapee_byedpi_core_ByeDpiProxy_jniCheckProxy(
+        __attribute__((unused)) JNIEnv *env,
+        __attribute__((unused)) jobject thiz) {
+
+    LOG(LOG_S, "check_proxy, fd: %d", g_proxy_fd);
+
+    if (g_proxy_fd < 0) {
+        LOG(LOG_S, "proxy is not running, fd: %d", g_proxy_fd);
+        return 0;
+    }
+
+    int val = 0;
+    socklen_t len = sizeof(val);
+
+    if (getsockopt(g_proxy_fd, SOL_SOCKET, SO_ACCEPTCONN, &val, &len) == -1) {
+        perror("getsockopt SO_ACCEPTCONN");
+        return 0;
+    }
+
+    if (val) {
+        LOG(LOG_S, "proxy is listening on fd: %d", g_proxy_fd);
+        return 1;
+    } else {
+        LOG(LOG_S, "proxy fd is open but not listening: %d", g_proxy_fd);
+        return 0;
     }
 
     return 0;

@@ -1,0 +1,47 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.ByeDPI" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#5976DF</item>
+        <item name="colorPrimaryVariant">#3C52A3</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#5976DF</item>
+        <item name="colorSecondaryVariant">#3C52A3</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle.Light</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle.Light</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle.Light</item>
+    </style>
+
+    <style name="TitleTextStyle.Light" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">#5976DF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="BodyTextStyle.Light" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">#757575</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PositiveButtonStyle.Light" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#5976DF</item>
+        <item name="rippleColor">#3C52A3</item>
+    </style>
+
+    <style name="NegativeButtonStyle.Light" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">#757575</item>
+        <item name="rippleColor">#a4a4a4</item>
+    </style>
+</resources>

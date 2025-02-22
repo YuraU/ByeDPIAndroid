@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ByeByeDPI</string>
+
+    <string name="connecting">Подключение…</string>
+    <string name="vpn_connect">Подключить</string>
+    <string name="vpn_disconnect">Отключить</string>
+    <string name="vpn_connected">Подключено (VPN)</string>
+    <string name="vpn_disconnected">Отключено (VPN)</string>
+    <string name="vpn_permission_denied">Нет разрешения на активацию VPN</string>
+    <string name="proxy_address">%1$s:%2$s</string>
+    <string name="proxy_up">Подключено (Proxy)</string>
+    <string name="proxy_down">Отключено (Proxy)</string>
+    <string name="proxy_start">Старт</string>
+    <string name="proxy_stop">Стоп</string>
+
+    <string name="settings_unavailable">Сначала отключитесь, чтобы зайти в настройки</string>
+    <string name="save_logs">Сохранить логи</string>
+    <string name="logs_failed">Не удалось собрать логи</string>
+
+    <string name="open_editor">Открыть редактор</string>
+
+    <string name="main_ask_for_permissions_header">Еще один шаг</string>
+    <string name="main_ask_for_permissions_description">ByeByeDPI использует VPN для работы. На следующем шаге нужно будет разрешить использование VPN.</string>
+    <string name="universal_action_continue">Продолжить</string>
+</resources>

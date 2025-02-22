@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ByeByeDPI</string>
+
+    <string name="connecting">Connecting…</string>
+    <string name="vpn_connect">Connect</string>
+    <string name="vpn_disconnect">Disconnect</string>
+    <string name="vpn_connected">Connected (VPN)</string>
+    <string name="vpn_disconnected">Disconnected (VPN)</string>
+    <string name="vpn_permission_denied">No permission to activate VPN</string>
+    <string name="proxy_address">%1$s:%2$s</string>
+    <string name="proxy_up">Connected (Proxy)</string>
+    <string name="proxy_down">Disconnected (Proxy)</string>
+    <string name="proxy_start">Start</string>
+    <string name="proxy_stop">Stop</string>
+
+    <string name="settings_unavailable">Disconnect first to access settings</string>
+    <string name="save_logs">Save logs</string>
+    <string name="logs_failed">Failed to collect logs</string>
+
+    <string name="open_editor">Open editor</string>
+
+    <string name="main_ask_for_permissions_header">Just one more step</string>
+    <string name="main_ask_for_permissions_description">ByeByeDpi is using a VPN Configuration to secure your network. You will be asked to allow it in the next step.</string>
+    <string name="universal_action_continue">Continue</string>
+</resources>

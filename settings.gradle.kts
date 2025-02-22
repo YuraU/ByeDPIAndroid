@@ -15,3 +15,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "ByeDpi"
 include(":app")
+include(":feature-connection-ui")
+include(":common-storage")
+include(":app-bypass-services")
+include(":common-system")
+include(":feature-settings")
+include(":feature-bypass-test")
+include(":feature-bypass-api")
+include(":common-ui")

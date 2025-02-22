@@ -5,36 +5,53 @@ import android.content.Context
 import android.content.Intent
 import android.net.VpnService
 import android.os.SystemClock
-import io.github.dovecoteescapee.byedpi.data.Mode
-import io.github.dovecoteescapee.byedpi.services.ServiceManager
-import io.github.dovecoteescapee.byedpi.utility.getPreferences
-import io.github.dovecoteescapee.byedpi.utility.mode
+import io.github.dovecoteescapee.byedpi.bypass.services.ServiceManager
+import io.github.dovecoteescapee.byedpi.common.storage.Mode
+import io.github.dovecoteescapee.byedpi.common.storage.di.StorageComponentHolder
+import io.github.dovecoteescapee.byedpi.common.system.components.ContextComponent
+import io.github.dovecoteescapee.byedpi.common.system.components.ContextComponentHolder
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class BootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action == Intent.ACTION_BOOT_COMPLETED ||
             intent.action == Intent.ACTION_REBOOT ||
-            intent.action == "android.intent.action.QUICKBOOT_POWERON") {
-
+            intent.action == "android.intent.action.QUICKBOOT_POWERON"
+        ) {
             // for A15, todo: use wasForceStopped
             if (SystemClock.elapsedRealtime() > 5 * 60 * 1000) {
                 return
             }
 
-            val preferences = context.getPreferences()
-            val autorunEnabled = preferences.getBoolean("autostart", false)
+            initComponents(context.applicationContext)
 
-            if(autorunEnabled) {
-                when (preferences.mode()) {
-                    Mode.VPN -> {
-                        if (VpnService.prepare(context) == null) {
-                            ServiceManager.start(context, Mode.VPN)
+            val appSettings = StorageComponentHolder.get().appSettings()
+
+            GlobalScope.launch {
+                appSettings.getString("byedpi_mode")?.let {
+                    val mode = Mode.fromString(it)
+                    val autorunEnabled = appSettings.getBoolean("autostart")
+
+                    if (autorunEnabled) {
+                        when (mode) {
+                            Mode.VPN -> {
+                                if (VpnService.prepare(context) == null) {
+                                    ServiceManager.startVpn(context)
+                                }
+                            }
+
+                            Mode.Proxy -> {
+                                ServiceManager.startProxy(context)
+                            }
                         }
                     }
-
-                    Mode.Proxy -> ServiceManager.start(context, Mode.Proxy)
                 }
             }
         }
+    }
+
+    private fun initComponents(context: Context) {
+        ContextComponentHolder.set { ContextComponent(context) }
     }
 }

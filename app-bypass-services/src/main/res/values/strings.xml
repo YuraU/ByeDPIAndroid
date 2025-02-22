@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vpn_channel_name">VPN</string>
+    <string name="proxy_channel_name">Прокси</string>
+    <string name="notification_title">ByeByeDPIV2</string>
+    <string name="vpn_notification_content">VPN работает</string>
+    <string name="proxy_notification_content">Прокси работает</string>
+
+    <string name="failed_to_start">Не удалось запустить %1$s</string>
+</resources>

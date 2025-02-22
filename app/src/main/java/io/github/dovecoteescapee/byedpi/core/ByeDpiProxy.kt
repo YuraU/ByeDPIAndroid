@@ -1,7 +1,6 @@
 package io.github.dovecoteescapee.byedpi.core
 
-import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
+import androidx.annotation.WorkerThread
 
 class ByeDpiProxy {
     companion object {
@@ -10,48 +9,49 @@ class ByeDpiProxy {
         }
     }
 
-    private val mutex = Mutex()
-
-    suspend fun startProxy(preferences: ByeDpiProxyPreferences): Int {
-        val result = createSocket(preferences)
+    @WorkerThread
+    fun startProxy(args: Array<String>): Int {
+        val result = createSocket(args)
 
         if (result < 0) {
             return -1
         }
 
-        return jniStartProxy()
+        val code = jniStartProxy()
+
+        return code
     }
 
-    suspend fun stopProxy(): Int {
-        mutex.withLock {
-            val result = jniStopProxy()
+    fun stopProxy(): Int {
+        val result = jniStopProxy()
 
-            if (result < 0) {
-                return -1
-            }
-
-            return result
+        if (result < 0) {
+            return -1
         }
+
+        return result
     }
 
-    private suspend fun createSocket(preferences: ByeDpiProxyPreferences): Int =
-        mutex.withLock {
-            val result = createSocketFromPreferences(preferences)
+    @WorkerThread
+    fun isProxyActive(): Boolean {
+        return jniCheckProxy() == 1
+    }
 
-            if (result < 0) {
-                return -1
-            }
+    private fun createSocket(args: Array<String>): Int {
+        val result = createSocketFromPreferences(args)
 
-            return result
+        if (result < 0) {
+            return -1
         }
 
-    private fun createSocketFromPreferences(preferences: ByeDpiProxyPreferences) =
-        when (preferences) {
-            is ByeDpiProxyCmdPreferences -> jniCreateSocket(preferences.args)
-            is ByeDpiProxyUIPreferences -> jniCreateSocket(preferences.uiargs)
-        }
+        return result
+    }
+
+    private fun createSocketFromPreferences(args: Array<String>) =
+        jniCreateSocket(args)
 
     private external fun jniCreateSocket(args: Array<String>): Int
     private external fun jniStartProxy(): Int
     private external fun jniStopProxy(): Int
+    private external fun jniCheckProxy(): Int
 }

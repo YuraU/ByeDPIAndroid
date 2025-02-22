@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test_start">Start Test</string>
+    <string name="test_stop">Stop Test</string>
+    <string name="test_process">Testing %1$d/%2$d</string>
+    <string name="test_complete">Test Completed</string>
+    <string name="test_good_cmds">Commands with over 50% success — apply from highest to lowest</string>
+    <string name="test_complete_info">Tap a command to copy or apply it</string>
+    <string name="test_disclaimer">
+        This section allows you to test the app using a set of pre-defined commands.
+        \nDuring testing, the system checks the accessibility of various websites through the proxy, and you can monitor progress in real time.
+        \n
+        \nNote that this testing feature is still under development, and the set of commands is currently limited.
+        \nTest results may be useful for initial proxy evaluation but do not guarantee flawless operation under real-world conditions.
+    </string>
+    <string name="test_proxy_error">Proxy error. Test stopped</string>
+    <string name="test_crash">
+        Did the app crash during testing?
+        \n\nGo to test settings and increase the delay between commands by 3 seconds.
+        \n\nIt may also be caused by modified hosts and/or AdAway running.
+    </string>
+    <string name="test_settings_gdomain">Exclude nearest GoogleVideo from testing</string>
+    <string name="test_settings_fulllog">Extended log with host responses</string>
+    <string name="test_settings_logclickable">Make all commands clickable in test log</string>
+    <string name="test_settings_userdomains">Use custom domain list</string>
+    <string name="test_settings_domains">Domain List</string>
+    <string name="test_settings_usercommands">Use custom command list</string>
+    <string name="test_settings_commands">Command List</string>
+    <string name="test_delay">Delay between commands\nin seconds</string>
+    <string name="test_requestsсount">Number of requests per domain</string>
+
+    <string name="cmd_history_apply">Apply</string>
+    <string name="cmd_history_copy">Copy</string>
+    <string name="cmd_history_menu">Select action</string>
+
+    <string name="title_settings">Settings</string>
+    <string name="settings_unavailable">Disconnect first to access settings</string>
+</resources>

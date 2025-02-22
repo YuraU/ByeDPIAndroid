@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="general_category">General</string>
+    <string name="lang_settings">Language</string>
+    <string name="theme_settings">Theme</string>
+    <string name="mode_setting">Mode</string>
+    <string name="dbs_ip_setting">DNS</string>
+    <string name="ipv6_setting">IPv6</string>
+    <string name="applist_setting">App Filter</string>
+    <string name="apps_select">Select Apps</string>
+    <string name="automation">Automation</string>
+    <string name="autostart_settings">Auto-start app on device boot</string>
+    <string name="autoconnect_settings">Auto-connect on app launch</string>
+    <string name="byedpi_category">ByeDPI</string>
+    <string name="use_command_line_settings">Use command line</string>
+    <string name="ui_editor">Standard Editor</string>
+    <string name="command_line_editor">Command Line Editor</string>
+    <string name="title_test">Command Selection (Beta)</string>
+    <string name="summary_test">Automatic testing of pre-defined command sets</string>
+    <string name="byedpi_proxy">Proxy</string>
+    <string name="bye_dpi_proxy_ip_setting">Address</string>
+    <string name="byedpi_proxy_port_setting">Port</string>
+    <string name="about_category">About</string>
+    <string name="telegram_link">Telegram Group</string>
+    <string name="source_code_link">Source Code</string>
+    <string name="version">ByeByeDPI</string>
+    <string name="byedpi_version">ByeDPI</string>
+
+    <string name="cmd_documentation">ByeDPI Documentation</string>
+    <string name="byedpi_docs">https://github.com/hufrea/byedpi/blob/main/README.md</string>
+    <string name="command_line_arguments">Command Line Arguments</string>
+
+    <string name="cmd_history_title">Command History</string>
+    <string name="cmd_history_menu">Select action</string>
+    <string name="cmd_history_apply">Apply</string>
+    <string name="cmd_history_copy">Copy</string>
+    <string name="cmd_history_rename">Rename</string>
+    <string name="cmd_history_pin">Pin</string>
+    <string name="cmd_history_unpin">Unpin</string>
+    <string name="cmd_history_pinned">Pinned</string>
+    <string name="cmd_history_delete">Delete</string>
+
+    <string name="byedpi_readme_link">What does it all mean?</string>
+    <string name="byedpi_max_connections_setting">Max Connections</string>
+    <string name="byedpi_buffer_size_setting">Buffer Size</string>
+    <string name="byedpi_no_domain_setting">No Domain</string>
+    <string name="byedpi_desync_method_setting">Desync Method</string>
+    <string name="byedpi_split_position_setting">Split Position</string>
+    <string name="byedpi_split_at_host_setting">Split in Host</string>
+    <string name="byedpi_fake_ttl_setting">Fake Packet TTL</string>
+    <string name="byedpi_host_mixed_case_setting">Host with Mixed Case</string>
+    <string name="byedpi_domain_mixed_case_setting">Domain with Mixed Case</string>
+    <string name="byedpi_host_remove_spaces_setting">Remove Spaces from Host</string>
+    <string name="byedpi_tlsrec_enabled_setting">Split TLS Record</string>
+    <string name="byedpi_tlsrec_position_setting">TLS Record Split Position</string>
+    <string name="byedpi_tlsrec_at_sni_setting">Split TLS Record at SNI</string>
+    <string name="byedpi_tcp_fast_open_setting">TCP Fast Open</string>
+    <string name="byedpi_udp_fake_count">Fake UDP Count</string>
+    <string name="byedpi_desync">Desynchronization</string>
+    <string name="byedpi_hosts_mode_setting">Hosts</string>
+    <string name="byedpi_hosts_blacklist_setting">Host Blacklist</string>
+    <string name="byedpi_hosts_whitelist_setting">Host Whitelist</string>
+    <string name="byedpi_default_ttl_setting">Default TTL</string>
+    <string name="byedpi_drop_sack_setting">Drop SACK</string>
+    <string name="desync_udp_category">UDP</string>
+    <string name="desync_http_category">HTTP</string>
+    <string name="desync_https_category">HTTPS</string>
+    <string name="byedpi_protocols_category">Protocols</string>
+    <string name="byedpi_protocols_hint">Uncheck all to desynchronize all traffic</string>
+    <string name="byedpi_fake_offset_setting">Fake Packet Offset</string>
+    <string name="sni_of_fake_packet">SNI of Fake Packet</string>
+    <string name="oob_data">OOB Data</string>
+    <string name="desync_http">HTTP Desync</string>
+    <string name="desync_https">HTTPS Desync</string>
+    <string name="desync_udp">UDP Desync</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="general_category">Общие</string>
+    <string name="lang_settings">Язык</string>
+    <string name="theme_settings">Тема</string>
+    <string name="mode_setting">Режим</string>
+    <string name="dbs_ip_setting">DNS</string>
+    <string name="ipv6_setting">IPv6</string>
+    <string name="applist_setting">Фильтр приложений</string>
+    <string name="apps_select">Выбрать приложения</string>
+    <string name="automation">Автоматизация</string>
+    <string name="autostart_settings">Автозапуск приложения при включении устройства</string>
+    <string name="autoconnect_settings">Автоматическое подключение при открытии приложения</string>
+    <string name="byedpi_category">ByeDPI</string>
+    <string name="use_command_line_settings">Использовать командную строку</string>
+    <string name="ui_editor">Стандартный редактор</string>
+    <string name="command_line_editor">Редактор командной строки</string>
+    <string name="title_test">Подбор команд (Beta)</string>
+    <string name="summary_test">Автоматическое тестирование работы подготовленных наборов команд</string>
+    <string name="byedpi_proxy">Прокси</string>
+    <string name="bye_dpi_proxy_ip_setting">Адрес</string>
+    <string name="byedpi_proxy_port_setting">Порт</string>
+    <string name="about_category">О программе</string>
+    <string name="telegram_link">Группа Telegram</string>
+    <string name="source_code_link">Исходный код</string>
+    <string name="version">ByeByeDPI</string>
+    <string name="byedpi_version">ByeDPI</string>
+
+    <string name="cmd_documentation">Документация ByeDPI</string>
+    <string name="byedpi_docs">https://github.com/hufrea/byedpi/blob/main/README.md</string>
+    <string name="command_line_arguments">Аргументы командной строки</string>
+
+    <string name="cmd_history_title">История команд</string>
+    <string name="cmd_history_menu">Выберите действие</string>
+    <string name="cmd_history_apply">Применить</string>
+    <string name="cmd_history_copy">Копировать</string>
+    <string name="cmd_history_rename">Переименовать</string>
+    <string name="cmd_history_pin">Закрепить</string>
+    <string name="cmd_history_unpin">Открепить</string>
+    <string name="cmd_history_pinned">Закреплено</string>
+    <string name="cmd_history_delete">Удалить</string>
+
+    <string name="byedpi_readme_link">Что все это значит?</string>
+    <string name="byedpi_max_connections_setting">Максимальное к-во подключений</string>
+    <string name="byedpi_buffer_size_setting">Размер буфера</string>
+    <string name="byedpi_no_domain_setting">Без домена</string>
+    <string name="byedpi_desync_method_setting">Метод десинхронизации</string>
+    <string name="byedpi_split_position_setting">Позиция разделения</string>
+    <string name="byedpi_split_at_host_setting">Разделить в хосте</string>
+    <string name="byedpi_fake_ttl_setting">TTL поддельных пакетов</string>
+    <string name="byedpi_host_mixed_case_setting">Смешанный регистр хоста</string>
+    <string name="byedpi_domain_mixed_case_setting">Смешанный регистр домена</string>
+    <string name="byedpi_host_remove_spaces_setting">Удалить пробелы из хоста</string>
+    <string name="byedpi_tlsrec_enabled_setting">Разделить TLS запись</string>
+    <string name="byedpi_tlsrec_position_setting">Позиция разделения TLS записи</string>
+    <string name="byedpi_tlsrec_at_sni_setting">Разделить TLS запись в SNI</string>
+    <string name="byedpi_tcp_fast_open_setting">TCP Fast Open</string>
+    <string name="byedpi_udp_fake_count">Количество поддельных UDP</string>
+    <string name="byedpi_desync">Десинхронизация</string>
+    <string name="byedpi_hosts_mode_setting">Хосты</string>
+    <string name="byedpi_hosts_blacklist_setting">Черный список хостов</string>
+    <string name="byedpi_hosts_whitelist_setting">Белый список хостов</string>
+    <string name="byedpi_default_ttl_setting">TTL по умолчанию</string>
+    <string name="byedpi_drop_sack_setting">Отбрасывать SACK</string>
+    <string name="desync_udp_category">UDP</string>
+    <string name="desync_http_category">HTTP</string>
+    <string name="desync_https_category">HTTPS</string>
+    <string name="byedpi_protocols_category">Протоколы</string>
+    <string name="byedpi_protocols_hint">Снимите все галочки, чтобы десинхронизировать весь трафик</string>
+    <string name="byedpi_fake_offset_setting">Смещение поддельных пакетов</string>
+    <string name="sni_of_fake_packet">SNI поддельного пакета</string>
+    <string name="oob_data">OOB Данные</string>
+    <string name="desync_http">Десинхронизация HTTP</string>
+    <string name="desync_https">Десинхронизация HTTPS</string>
+    <string name="desync_udp">Десинхронизация UDP</string>
+</resources>
